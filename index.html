@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Ball</title>
+</head>
+<body>
+	<h1>Score: <span class="score"></span></h1>
+
+	<div class="ball" style="background: red; height: 100px; width: 100px; position: absolute; transition: 1s; left: 200px; top: 100px; border-radius: 50px;"></div>
+	<div class="ball1" style="background: red; height: 100px; width: 100px; position: absolute; transition: 1s; left: 400px; top: 300px; border-radius: 50px;"></div>
+
+	<div class="ball2" style="background: orange; height: 100px; width: 100px; position: absolute; transition: 1s; left: 200px; top: 500px; border-radius: 50px;"></div>
+	<div class="ball3" style="background: orange; height: 100px; width: 100px; position: absolute; transition: 1s; left: 500px; top: 600px; border-radius: 50px;"></div>
+
+	<div class="ball4" style="background: skyblue; height: 100px; width: 100px; position: absolute; transition: 1s; left: 700px; top: 400px; border-radius: 50px;"></div>
+	<div class="ball5" style="background: skyblue; height: 100px; width: 100px; position: absolute; transition: 1s; left: 800px; top: 700px; border-radius: 50px;"></div>
+
+	<div class="ball6" style="background: yellow; height: 100px; width: 100px; position: absolute; transition: 1s; left: 900px; top: 100px; border-radius: 50px;"></div>
+	<div class="ball7" style="background: yellow; height: 100px; width: 100px; position: absolute; transition: 1s; left: 670px; top: 200px; border-radius: 50px;"></div>
+
+	<script type="text/javascript">
+
+		let ball = document.querySelector('.ball');
+		let ball1 = document.querySelector('.ball1');
+		let ball2 = document.querySelector('.ball2');
+		let ball3 = document.querySelector('.ball3');
+		let ball4 = document.querySelector('.ball4');
+		let ball5 = document.querySelector('.ball5');
+		let ball6 = document.querySelector('.ball6')
+		let ball7 = document.querySelector('.ball7')
+		let score = document.querySelector('.score')
+		let score1 = 0
+
+		let pos = 100;
+		let pos1 = 300;
+		let pos2 = 200;
+		let pos3 = 500;
+		let pos4 = 700;
+		let pos5 = 800;
+		let pos6 = 900;
+		let pos7 = 200;
+		
+
+		let redMove = function() {
+			pos = pos + 20;
+			pos1 = pos1 + 20;
+			pos2 = pos2 + 20;
+			pos3 = pos3 + 20;
+			pos4 = pos4 + 20;
+			pos5 = pos5 + 20;
+			pos6 = pos6 - 20;
+			pos7 = pos7 + 20;
+
+			ball.style.top = pos + "px";
+			ball1.style.top = pos1 + "px"
+			ball2.style.left = pos2 + "px"
+			ball3.style.left = pos3 + "px"
+			ball4.style.left = pos4 + "px"
+			ball5.style.left = pos5 + "px"
+			ball6.style.left = pos6 + "px"
+			ball7.style.top = pos7 + "px"
+		}
+		setInterval(redMove, 1000);
+
+
+		let destroy = function() {
+			ball.style.display = "none"
+			ball1.style.display = "none"
+			ball2.style.display = "none"
+			ball3.style.display = "none"
+		}
+		setTimeout(destroy, 9000);
+
+
+		ball.onclick = function() {
+			ball.style.display = "none";
+			score1 = score1 + 1;
+			score.innerHTML = score1;
+			if (score1==8) {
+				alert("You win!")
+			}
+		}
+
+		ball1.onclick = function() {
+			ball1.style.display = "none"
+			score1 = score1 + 1;
+			score.innerHTML = score1;
+			if (score1==8) {
+				alert("You win!")
+			}
+		}
+
+		ball2.onclick = function() {
+			ball2.style.display = "none"
+			score1 = score1 + 1;
+			score.innerHTML = score1;
+			if (score1==8) {
+				alert("You win!")
+			}
+		}
+
+		ball3.onclick = function() {
+			ball3.style.display = "none"
+			score1 = score1 + 1;
+			score.innerHTML = score1;
+			if (score1==8) {
+				alert("You win!")
+			}
+		}
+
+		ball4.onclick = function() {
+			ball4.style.display = "none"
+			score1 = score1 + 1;
+			score.innerHTML = score1;
+			if (score1==8) {
+				alert("You win!")
+			}
+		}
+
+		ball5.onclick = function() {
+			ball5.style.display = "none"
+			score1 = score1 + 1;
+			score.innerHTML = score1;
+			if (score1==8) {
+				alert("You win!")
+			}
+		}
+
+		ball6.onclick = function() {
+			ball6.style.display = "none"
+			score1 = score1 + 1;
+			score.innerHTML = score1;
+			if (score1==8) {
+				alert("You win!")
+			}
+		}
+
+		ball7.onclick = function() {
+			ball7.style.display = "none"
+			score1 = score1 + 1;
+			score.innerHTML = score1;
+			if (score1==8) {
+				alert("You win!")
+			}
+		}
+
+	</script>
+
+</body>
+</html>
